@@ -6,6 +6,10 @@
 
     box-sizing: border-box;
 }
+body {
+    height: 100vh;
+    width: 100vw;
+}
 
 /* --- Typographic Styling --- */
 p {
@@ -16,6 +20,8 @@ h1 {
     font-weight: 700;
     font-size: 7rem;
     line-height: 1em;
+
+    margin: 0;
 }
 h2 {
     font-weight: 700;
@@ -30,6 +36,8 @@ h2 {
 
 /* ----- About-Styling ----- */
 .slide-out {
+    display: none;
+    
     position: absolute;
     top: 0;
     left: 0;
