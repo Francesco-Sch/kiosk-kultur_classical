@@ -20,3 +20,25 @@ h2 {
     font-size: 2.5rem;
     line-height: 1em;
 }
+
+
+/* ----- Header-Styling ----- */
+
+/* ----- Slider-Styling ----- */
+
+/* ----- About-Styling ----- */
+.slide-out {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 42.5vw;
+    height: 100vh;
+    padding: 35px;
+
+    background-color: white;
+    border-left: 2px solid black;
+    border-right: 2px solid black;
+
+    transform: translate(-100%, 0);
+}
