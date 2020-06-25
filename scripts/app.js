@@ -36,10 +36,10 @@ swiperContainer.addEventListener('mousemove', () => {
     var slidePosition = slides[0].getBoundingClientRect()
 
     if(slidePosition.left <= windowThird) {
-        document.querySelector('#about-project').style.opacity = '0';
+        document.querySelector('.about-project').style.opacity = '0';
         console.log('Works!')
     } else {
-        document.querySelector('#about-project').style.opacity = '1';
+        document.querySelector('.about-project').style.opacity = '1';
     }
 })
 
@@ -47,7 +47,25 @@ swiperContainer.addEventListener('mousemove', () => {
 const projectButton = document.querySelector('#about-project');
 const projectInformation = document.querySelector('#slide-out');
 
-// Opens information slide out
-projectButton.addEventListener('click', () => {
-    projectInformation.classList.add('show-information');
+// Open and closes information slide out
+document.body.addEventListener('click', (event) => {
+    let clickedOutside = true;
+
+    event.composedPath().forEach( (item) => {
+        if(!clickedOutside) {
+            return
+        }
+
+        // Opens slide out
+        //Keeps it open on click inside of it
+        if(item.className === 'about-project' || item.className === 'show-information') {
+            clickedOutside = false;
+            projectInformation.classList.add('show-information');
+        }
+    })
+
+    // Closes slide out on click outside of it
+    if(clickedOutside) {
+        projectInformation.classList.remove('show-information');
+    }
 })

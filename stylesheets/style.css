@@ -41,7 +41,7 @@ header {
     margin-left: 10%;
 }
 
-#about-project {
+.about-project {
     width: 40%;
     margin-top: auto;
     z-index: 10;
@@ -54,7 +54,7 @@ header {
     background: none;
     border: none;
 }
-#about-project:hover {
+.about-project:hover {
     text-decoration: underline;
 }
 
@@ -149,7 +149,7 @@ header {
     border-right: 2px solid black;
 
     transform: translate(-100%, 0);
-    transition: all .3s;
+    transition: all .4s;
 }
 
 #slide-out.show-information {
