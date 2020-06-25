@@ -4,4 +4,4 @@ var mySwiper = new Swiper ('.swiper-container', {
     freeMode: true,
     slidesOffsetBefore: 700,
     setWrapperSize: true
-  })
+})
