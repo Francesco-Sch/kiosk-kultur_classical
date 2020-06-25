@@ -66,14 +66,34 @@ header {
     height: 100%;
 }
 .swiper-slide  {
+    display: flex;
     width: 100%;
     height: 100%;
 
     overflow: hidden;
 }
+.swiper-slide .slide-information {
+    margin-top: auto;
+}
+.swiper-slide .slide-information .icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+
+    background-color: white;
+    border: 1px solid black;
+}
+.swiper-slide .slide-information .icon p {
+    margin: 0;
+    font-weight: 400;
+}
 .swiper-slide img {
-    width: 100%;
-    height: auto;
+    width: auto;
+    height: 100%;
 }
 
 
