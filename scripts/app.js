@@ -42,3 +42,12 @@ swiperContainer.addEventListener('mousemove', () => {
         document.querySelector('#about-project').style.opacity = '1';
     }
 })
+
+// Shows information about the project on button click
+const projectButton = document.querySelector('#about-project');
+const projectInformation = document.querySelector('#slide-out');
+
+// Opens information slide out
+projectButton.addEventListener('click', () => {
+    projectInformation.classList.add('show-information');
+})

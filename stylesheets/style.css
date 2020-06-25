@@ -134,12 +134,11 @@ header {
 
 
 /* ----- About-Styling ----- */
-.slide-out {
-    display: none;
-
+#slide-out {
     position: absolute;
     top: 0;
     left: 0;
+    z-index: 500;
 
     width: 42.5vw;
     height: 100vh;
@@ -150,4 +149,9 @@ header {
     border-right: 2px solid black;
 
     transform: translate(-100%, 0);
+    transition: all .3s;
+}
+
+#slide-out.show-information {
+    transform: translate(0, 0);
 }
