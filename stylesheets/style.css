@@ -42,7 +42,17 @@ header {
 }
 
 #about-project {
+    width: 40%;
     margin-top: auto;
+
+    font-weight: 300;
+    text-align: left;
+
+    background: none;
+    border: none;
+}
+#about-project:hover {
+    text-decoration: underline;
 }
 
 /* ----- Slider-Styling ----- */
