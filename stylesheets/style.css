@@ -97,18 +97,23 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    opacity: 0;
+
+    transition: all .2s;
 
     position: absolute;
     left: 30px;
     bottom: 0px;
     z-index: 100;
 
-
     width: 200px;
     padding: 10px;
 
     background-color: white;
     border: 1px solid black;
+}
+.swiper-slide .slide-information .information.show {
+    opacity: 1;
 }
 .swiper-slide .slide-information .information p {
     margin: 2px 0;
