@@ -10,6 +10,7 @@
 body {
     height: 100vh;
     width: 100vw;
+    padding: 10vh 0;
 }
 
 /* --- Typographic Styling --- */
@@ -32,6 +33,17 @@ h2 {
 
 
 /* ----- Header-Styling ----- */
+header {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 350px;
+    margin-left: 10%;
+}
+
+#about-project {
+    margin-top: auto;
+}
 
 /* ----- Slider-Styling ----- */
 
