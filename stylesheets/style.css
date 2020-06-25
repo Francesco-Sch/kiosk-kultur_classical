@@ -73,6 +73,8 @@ header {
     overflow: hidden;
 }
 .swiper-slide .slide-information {
+    display: flex;
+    flex-direction: row;
     margin-top: auto;
 }
 .swiper-slide .slide-information .icon {
@@ -90,6 +92,32 @@ header {
 .swiper-slide .slide-information .icon p {
     margin: 0;
     font-weight: 400;
+}
+.swiper-slide .slide-information .information {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    position: absolute;
+    left: 30px;
+    bottom: 0px;
+    z-index: 100;
+
+
+    width: 200px;
+    padding: 10px;
+
+    background-color: white;
+    border: 1px solid black;
+}
+.swiper-slide .slide-information .information p {
+    margin: 2px 0;
+}
+.swiper-slide .slide-information .information .title {
+    font-weight: 500;
+}
+.swiper-slide .slide-information .information .place {
+    font-style: italic;
 }
 .swiper-slide img {
     width: auto;
