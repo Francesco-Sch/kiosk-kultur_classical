@@ -36,10 +36,10 @@ swiperContainer.addEventListener('mousemove', () => {
     var slidePosition = slides[0].getBoundingClientRect()
 
     if(slidePosition.left <= windowThird) {
-        document.querySelector('.about-project').style.opacity = '0';
+        document.querySelector('.about-project').style.display = 'none';
         console.log('Works!')
     } else {
-        document.querySelector('.about-project').style.opacity = '1';
+        document.querySelector('.about-project').style.display = 'block';
     }
 })
 
