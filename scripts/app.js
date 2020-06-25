@@ -26,3 +26,19 @@ informationIcons.forEach( (icon) => {
         hideInformation(icon)
     });
 })
+
+// Hides 'About project'-Button, when the first slide moves
+const swiperContainer = document.querySelector('.swiper-container');
+const slides = document.querySelectorAll('.swiper-slide');
+let windowHalf = window.innerWidth / 2;
+
+swiperContainer.addEventListener('mousemove', () => {
+    var slidePosition = slides[0].getBoundingClientRect()
+
+    if(slidePosition.left <= windowHalf) {
+        document.querySelector('#about-project').style.opacity = '0';
+        console.log('Works!')
+    } else {
+        document.querySelector('#about-project').style.opacity = '1';
+    }
+})
