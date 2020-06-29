@@ -37,11 +37,11 @@ swiperContainer.addEventListener('mousemove', () => {
 
     if(slidePosition.left <= windowThird) {
         document.querySelector('.about-project').style.display = 'none';
-        document.querySelector('header h1').style.display = 'none';
+        document.querySelector('header h1').style.opacity = '0';
         console.log('Works!')
     } else {
         document.querySelector('.about-project').style.display = 'block';
-        document.querySelector('header h1').style.display = 'block';
+        document.querySelector('header h1').style.opacity = '1';
     }
 })
 

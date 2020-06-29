@@ -40,6 +40,9 @@ header {
     width: 350px;
     margin-left: 10%;
 }
+header h1 {
+    transition: opacity .25s;
+}
 
 .about-project {
     width: 40%;
