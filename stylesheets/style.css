@@ -12,6 +12,10 @@ body {
     width: 100vw;
     padding: 10vh 0;
 }
+::selection {
+    background-color: black;
+    color: white;
+}
 
 /* --- Typographic Styling --- */
 p {
@@ -59,6 +63,8 @@ header h1 {
 }
 .about-project:hover {
     text-decoration: underline;
+
+    cursor: pointer;
 }
 
 /* ----- Slider-Styling ----- */
@@ -94,6 +100,8 @@ header h1 {
 
     background-color: white;
     border: 1px solid black;
+
+    cursor: pointer;
 }
 .swiper-slide .slide-information .icon p {
     margin: 0;
@@ -131,8 +139,8 @@ header h1 {
     font-style: italic;
 }
 .swiper-slide img {
-    width: auto;
-    height: 100%;
+    width: 100%;
+    height: auto;
 }
 
 /* ----- About-Styling ----- */
@@ -163,6 +171,7 @@ header h1 {
     transform: translate(0, 0);
 }
 
+/* --- Footer-Styling --- */
 footer {
     display: flex;
     flex-direction: row;
