@@ -27,7 +27,7 @@ informationIcons.forEach( (icon) => {
     });
 })
 
-// Hides 'About project'-Button, when the first slide moves
+// Hides 'About project'-Button and title, when the first slide moves
 const swiperContainer = document.querySelector('.swiper-container');
 const slides = document.querySelectorAll('.swiper-slide');
 let windowThird = window.innerWidth / 3;
@@ -37,9 +37,11 @@ swiperContainer.addEventListener('mousemove', () => {
 
     if(slidePosition.left <= windowThird) {
         document.querySelector('.about-project').style.display = 'none';
+        document.querySelector('header h1').style.display = 'none';
         console.log('Works!')
     } else {
         document.querySelector('.about-project').style.display = 'block';
+        document.querySelector('header h1').style.display = 'block';
     }
 })
 
