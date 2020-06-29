@@ -142,6 +142,9 @@ header h1 {
     left: 0;
     z-index: 500;
 
+    display: flex;
+    flex-direction: column;
+
     width: 42.5vw;
     height: 100vh;
     padding: 35px;
@@ -158,4 +161,14 @@ header h1 {
 }
 #slide-out.show-information {
     transform: translate(0, 0);
+}
+
+footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: auto;
+}
+footer p{
+    font-size: .75rem;
 }
