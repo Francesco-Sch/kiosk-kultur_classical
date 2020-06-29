@@ -28,7 +28,7 @@ h1 {
 h2 {
     font-weight: 700;
     font-size: 2.5rem;
-    line-height: 1em;
+    line-height: 1.25em;
 }
 
 
@@ -153,7 +153,9 @@ header h1 {
     transform: translate(-100%, 0);
     transition: all .4s;
 }
-
+#slide-out p {
+    margin: 1em 0;
+}
 #slide-out.show-information {
     transform: translate(0, 0);
 }
