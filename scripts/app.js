@@ -54,7 +54,7 @@ let windowHalfHeight = window.innerHeight / 2;
 const mq = window.matchMedia( "(max-width: 768px)" )
 
 
-"slideChangeTransitionStart slideChange slideChangeTransitionEnd".split(" ")
+"setTranslate transitionStart transitionEnd".split(" ")
 .forEach(function(event) {
     mySwiper.on(event, () => {
         var slidePosition = slides[0].getBoundingClientRect()
@@ -86,7 +86,7 @@ const resetButton = document.querySelector('#reset-slider .reset-left');
 const resetButtonTop = document.querySelector('#reset-slider .reset-top');
 
 resetButton.addEventListener('click', () => {
-    mySwiper.slideTo(0, 1000);
+    mySwiper.slideTo(0, 1000, false);
 })
 resetButtonTop.addEventListener('touchstart', () => {
     mySwiper.slideTo(0, 1000);
