@@ -83,8 +83,12 @@ const mq = window.matchMedia( "(max-width: 768px)" )
 
 // Let reset button reset the slider
 const resetButton = document.querySelector('#reset-slider .reset-left');
+const resetButtonTop = document.querySelector('#reset-slider .reset-top');
 
 resetButton.addEventListener('click', () => {
+    mySwiper.slideTo(0, 1000);
+})
+resetButtonTop.addEventListener('touchstart', () => {
     mySwiper.slideTo(0, 1000);
 })
 
