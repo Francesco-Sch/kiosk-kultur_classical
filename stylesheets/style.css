@@ -96,7 +96,7 @@ header h1 {
     left: 25px;
     z-index: 200;
 }
-#reset-slider .reset-left {
+#reset-slider .reset-left, #reset-slider .reset-top {
     display: block;
     visibility: hidden;
     opacity: 0;
@@ -106,24 +106,22 @@ header h1 {
     transition: visibility 0s, opacity .5s ease;
 }
 /* --- Makes reset button visible --- */
-#reset-slider .reset-left.show {
+#reset-slider .reset-left.show, #reset-slider .reset-top.show {
     visibility: visible;
     opacity: 1;
 }
-#reset-slider .reset-left:hover {
+#reset-slider .reset-left:hover, #reset-slider .reset-top:hover {
     cursor: pointer;
 }
-#reset-slider .reset-left polygon  {
+#reset-slider .reset-left polygon, #reset-slider .reset-top polygon {
     transition: fill .25s ease;
 
     fill: transparent;
 }
-#reset-slider .reset-left:hover polygon{
+#reset-slider .reset-left:hover polygon, #reset-slider .reset-top:hover polygon{
     fill: black;
 }
-#reset-slider .reset-top {
-    display: none;
-}
+
 
 /* ----- Slider-Styling ----- */
 .swiper-container {

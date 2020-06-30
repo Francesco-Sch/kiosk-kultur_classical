@@ -68,12 +68,15 @@ const mq = window.matchMedia( "(max-width: 768px)" )
         } else if(slidePosition.top <= windowHalfHeight && mq.matches) {
             document.querySelector('.about-project').style.display = 'none';
             document.querySelector('header h1').style.opacity = '0';
+
+            document.querySelector('#reset-slider .reset-top').classList.add('show');
     
         } else {
             document.querySelector('.about-project').style.display = 'block';
             document.querySelector('header h1').style.opacity = '1';
 
             document.querySelector('#reset-slider .reset-left').classList.remove('show');
+            document.querySelector('#reset-slider .reset-top').classList.remove('show');
         }
     })
 })
