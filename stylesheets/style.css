@@ -105,6 +105,10 @@ header h1 {
 
     transition: visibility 0s, opacity .5s ease;
 }
+#reset-slider .reset-top {
+    width: auto;
+    height: 22.5vh;
+}
 /* --- Makes reset button visible --- */
 #reset-slider .reset-left.show, #reset-slider .reset-top.show {
     visibility: visible;
@@ -120,6 +124,18 @@ header h1 {
 }
 #reset-slider .reset-left:hover polygon, #reset-slider .reset-top:hover polygon{
     fill: black;
+}
+
+/* ----- Responsive - Reset-Slider-Styling ----- */
+
+/* --- Responsive 01 (Max-Width: 768px) --- */
+@media only screen and (max-width: 768px) {
+    #reset-slider {
+        width: auto;
+        top: -65px;
+        right: -25px;
+        left: inherit;
+    }
 }
 
 
