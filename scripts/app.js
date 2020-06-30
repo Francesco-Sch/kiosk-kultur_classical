@@ -4,7 +4,10 @@ var mySwiper = new Swiper ('.swiper-container', {
     spaceBetween: 30,
     freeMode: true,
     slidesOffsetBefore: 700,
-    setWrapperSize: true
+    setWrapperSize: true,
+    mousewheel: {
+        invert: false,
+    },
 });
 
 // Shows information boxes on hover
