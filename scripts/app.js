@@ -1,13 +1,25 @@
 // Activates slider
 var mySwiper = new Swiper ('.swiper-container', {
+    direction: 'vertical',
     slidesPerView: 1.4,
     spaceBetween: 30,
     freeMode: true,
-    slidesOffsetBefore: 700,
+    slidesOffsetBefore: 500,
     setWrapperSize: true,
     mousewheel: {
         invert: false,
     },
+    grabCursor: true,
+    breakpoints: {
+        // when window width is >= 959px
+        768: {
+            direction: 'horizontal',
+        },
+        959: {
+            slidesOffsetBefore: 700,
+            direction: 'horizontal',
+        },
+    }
 });
 
 // Shows information boxes on hover
@@ -34,11 +46,14 @@ informationIcons.forEach( (icon) => {
 const swiperContainer = document.querySelector('.swiper-container');
 const slides = document.querySelectorAll('.swiper-slide');
 let windowThird = window.innerWidth / 3;
+const mq = window.matchMedia( "(max-width: 768px)" )
+
+console.log(mq.matches)
 
 swiperContainer.addEventListener('mousemove', () => {
     var slidePosition = slides[0].getBoundingClientRect()
 
-    if(slidePosition.left <= windowThird) {
+    if(slidePosition.left <= windowThird && !mq.matches) {
         document.querySelector('.about-project').style.display = 'none';
         document.querySelector('header h1').style.opacity = '0';
         console.log('Works!')

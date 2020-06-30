@@ -35,6 +35,17 @@ h2 {
     line-height: 1.25em;
 }
 
+/* ----- Responsive - Global-Sytling ----- */
+
+/* --- Responsive 01 (Max-Width: 768px) --- */
+@media only screen and (max-width: 768px) {
+    html {
+        overflow-y: hidden;
+    }
+    body {
+        padding: 0 10vw;
+    }
+}
 
 /* ----- Header-Styling ----- */
 header {
@@ -65,6 +76,17 @@ header h1 {
     text-decoration: underline;
 
     cursor: pointer;
+}
+
+/* ----- Responsive - Header-Sytling ----- */
+
+/* --- Responsive 01 (Max-Width: 768px) --- */
+@media only screen and (max-width: 768px) {
+    header {
+        height: 300px;
+        width: 100%;
+        margin: 10% 0 0 0;
+    }
 }
 
 /* ----- Slider-Styling ----- */
@@ -138,16 +160,39 @@ header h1 {
 .swiper-slide .slide-information .information .place {
     font-style: italic;
 }
-.swiper-slide img {
-    width: 100%;
-    height: auto;
-}
 .swiper-slide .image-container {
     width: 100%;
     height: 100%;
 
     background-position: center;
     background-size: cover;
+}
+
+/* ----- Responsive - Slider-Styling ----- */
+
+/* --- Responsive 01 (Max-Width: 959px) --- */
+@media only screen and (max-width: 959px) {
+
+    
+}
+/* --- Responsive 02 (Max-Width: 768px) --- */
+@media only screen and (max-width: 768px) {
+    .swiper-container {
+        padding: 0 10vw;
+    }
+    .swiper-slide  {
+        flex-direction: column;
+    }
+
+    .swiper-slide .slide-information .icon {
+        margin-bottom: 10px;
+    }
+    .swiper-slide .slide-information .information {
+        left: 0px;
+        top: 30px;
+
+        height: 75px;
+    }
 }
 
 /* ----- About-Styling ----- */
@@ -160,7 +205,7 @@ header h1 {
     display: flex;
     flex-direction: column;
 
-    width: 42.5vw;
+    width: 650px;
     height: 100vh;
     padding: 35px;
 
@@ -187,4 +232,24 @@ footer {
 }
 footer p{
     font-size: .75rem;
+}
+
+/* ----- Responsive - About-Sytling ----- */
+
+/* --- Responsive 01 (Max-Width: 959px) --- */
+@media only screen and (max-width: 959px) {
+
+    /* ----- About-Styling ----- */
+    #slide-out {
+        width: 550px;
+        padding: 35px;
+    }
+}
+/* --- Responsive 01 (Max-Width: 768px) --- */
+@media only screen and (max-width: 768px) {
+
+    /* ----- About-Styling ----- */
+    #slide-out {
+        width: 100vw;
+    }
 }
