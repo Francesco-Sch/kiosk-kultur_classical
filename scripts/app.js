@@ -53,22 +53,26 @@ let windowHalfHeight = window.innerHeight / 2;
 
 const mq = window.matchMedia( "(max-width: 768px)" )
 
-swiperContainer.addEventListener('mousemove', () => {
-    var slidePosition = slides[0].getBoundingClientRect()
 
-    if(slidePosition.left <= windowThird && !mq.matches) {
-        document.querySelector('.about-project').style.display = 'none';
-        document.querySelector('header h1').style.opacity = '0';
-        console.log('Works!')
-
-    } else if(slidePosition.top <= windowHalfHeight && mq.matches) {
-        document.querySelector('.about-project').style.display = 'none';
-        document.querySelector('header h1').style.opacity = '0';
-
-    } else {
-        document.querySelector('.about-project').style.display = 'block';
-        document.querySelector('header h1').style.opacity = '1';
-    }
+"slideChangeTransitionStart slideChange slideChangeTransitionEnd".split(" ")
+.forEach(function(event) {
+    mySwiper.on(event, () => {
+        var slidePosition = slides[0].getBoundingClientRect()
+    
+        if(slidePosition.left <= windowThird && !mq.matches) {
+            document.querySelector('.about-project').style.display = 'none';
+            document.querySelector('header h1').style.opacity = '0';
+            console.log('Works!')
+    
+        } else if(slidePosition.top <= windowHalfHeight && mq.matches) {
+            document.querySelector('.about-project').style.display = 'none';
+            document.querySelector('header h1').style.opacity = '0';
+    
+        } else {
+            document.querySelector('.about-project').style.display = 'block';
+            document.querySelector('header h1').style.opacity = '1';
+        }
+    })
 })
 
 // Shows information about the project on button click
