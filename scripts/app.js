@@ -11,7 +11,9 @@ var mySwiper = new Swiper ('.swiper-container', {
     },
     grabCursor: true,
     breakpoints: {
-        // when window width is >= 959px
+        500: {
+            slidesPerView: 2
+        },
         768: {
             slidesPerView: 1,
             direction: 'horizontal',
