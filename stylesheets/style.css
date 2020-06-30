@@ -40,10 +40,11 @@ h2 {
 /* --- Responsive 01 (Max-Width: 768px) --- */
 @media only screen and (max-width: 768px) {
     html {
-        overflow-y: hidden;
+        overflow: hidden;
     }
     body {
         padding: 0 10vw;
+        overflow-x: hidden;
     }
 }
 
