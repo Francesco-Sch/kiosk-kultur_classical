@@ -98,8 +98,17 @@ header h1 {
 }
 #reset-slider .reset-left {
     display: block;
+    visibility: hidden;
+    opacity: 0;
 
     width: 9.5vw;
+
+    transition: visibility 0s, opacity .5s ease;
+}
+/* --- Makes reset button visible --- */
+#reset-slider .reset-left.show {
+    visibility: visible;
+    opacity: 1;
 }
 #reset-slider .reset-left:hover {
     cursor: pointer;

@@ -62,7 +62,8 @@ const mq = window.matchMedia( "(max-width: 768px)" )
         if(slidePosition.left <= windowThird && !mq.matches) {
             document.querySelector('.about-project').style.display = 'none';
             document.querySelector('header h1').style.opacity = '0';
-            console.log('Works!')
+            
+            document.querySelector('#reset-slider .reset-left').classList.add('show');
     
         } else if(slidePosition.top <= windowHalfHeight && mq.matches) {
             document.querySelector('.about-project').style.display = 'none';
@@ -71,6 +72,8 @@ const mq = window.matchMedia( "(max-width: 768px)" )
         } else {
             document.querySelector('.about-project').style.display = 'block';
             document.querySelector('header h1').style.opacity = '1';
+
+            document.querySelector('#reset-slider .reset-left').classList.remove('show');
         }
     })
 })
