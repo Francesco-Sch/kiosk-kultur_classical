@@ -78,6 +78,13 @@ const mq = window.matchMedia( "(max-width: 768px)" )
     })
 })
 
+// Let reset button reset the slider
+const resetButton = document.querySelector('#reset-slider .reset-left');
+
+resetButton.addEventListener('click', () => {
+    mySwiper.slideTo(0, 1000);
+})
+
 // Shows information about the project on button click
 const projectButton = document.querySelector('#about-project');
 const projectInformation = document.querySelector('#slide-out');
