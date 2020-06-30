@@ -47,10 +47,11 @@ informationIcons.forEach( (icon) => {
 // Hides 'About project'-Button and title, when the first slide moves
 const swiperContainer = document.querySelector('.swiper-container');
 const slides = document.querySelectorAll('.swiper-slide');
-let windowThird = window.innerWidth / 3;
-const mq = window.matchMedia( "(max-width: 768px)" )
 
-console.log(mq.matches)
+let windowThird = window.innerWidth / 3;
+let windowHalfHeight = window.innerHeight / 2;
+
+const mq = window.matchMedia( "(max-width: 768px)" )
 
 swiperContainer.addEventListener('mousemove', () => {
     var slidePosition = slides[0].getBoundingClientRect()
@@ -59,6 +60,11 @@ swiperContainer.addEventListener('mousemove', () => {
         document.querySelector('.about-project').style.display = 'none';
         document.querySelector('header h1').style.opacity = '0';
         console.log('Works!')
+
+    } else if(slidePosition.top <= windowHalfHeight && mq.matches) {
+        document.querySelector('.about-project').style.display = 'none';
+        document.querySelector('header h1').style.opacity = '0';
+
     } else {
         document.querySelector('.about-project').style.display = 'block';
         document.querySelector('header h1').style.opacity = '1';
