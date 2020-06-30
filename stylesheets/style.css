@@ -89,6 +89,33 @@ header h1 {
     }
 }
 
+/* ----- Reset-Slider-Styling ----- */
+#reset-slider {
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    z-index: 200;
+}
+#reset-slider .reset-left {
+    display: block;
+
+    width: 9.5vw;
+}
+#reset-slider .reset-left:hover {
+    cursor: pointer;
+}
+#reset-slider .reset-left polygon  {
+    transition: fill .25s ease;
+
+    fill: transparent;
+}
+#reset-slider .reset-left:hover polygon{
+    fill: black;
+}
+#reset-slider .reset-top {
+    display: none;
+}
+
 /* ----- Slider-Styling ----- */
 .swiper-container {
     position: absolute;
