@@ -120,3 +120,10 @@ document.body.addEventListener('click', (event) => {
         projectInformation.classList.remove('show-information');
     }
 })
+
+// Closes slide out on mobile 
+const closingArrow = document.querySelector('.close-slide-out');
+
+closingArrow.addEventListener('click', () => {
+    projectInformation.classList.remove('show-information');
+})
