@@ -286,6 +286,10 @@ header h1 {
     transform: translate(0, 0);
 }
 
+#slide-out .close-slide-out {
+    display: none;
+}
+
 /* --- Footer-Styling --- */
 footer {
     display: flex;
@@ -308,11 +312,28 @@ footer p{
         padding: 35px;
     }
 }
-/* --- Responsive 01 (Max-Width: 768px) --- */
+/* --- Responsive 02 (Max-Width: 768px) --- */
 @media only screen and (max-width: 768px) {
 
     /* ----- About-Styling ----- */
     #slide-out {
         width: 100vw;
+
+        overflow-y: scroll;
+    }
+    #slide-out .close-slide-out {
+        display: block;
+        width: 20%
+    }
+    /* --- Footer-Styling --- */
+    footer p{
+        line-height: 1rem;
+    }
+}
+/* --- Responsive 03 (Max-Width: 500px) --- */
+@media only screen and (max-width: 500px) {
+    /* --- About-Styling --- */
+    #slide-out .close-slide-out {
+        width: 30%
     }
 }
