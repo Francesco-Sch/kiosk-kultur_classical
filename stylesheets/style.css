@@ -80,7 +80,7 @@ header h1 {
 .swiper-slide  {
     display: flex;
     width: 100%;
-    height: 100%;
+    height: 80vh;
 
     overflow: hidden;
 }
@@ -141,6 +141,13 @@ header h1 {
 .swiper-slide img {
     width: 100%;
     height: auto;
+}
+.swiper-slide .image-container {
+    width: 100%;
+    height: 100%;
+
+    background-position: center;
+    background-size: cover;
 }
 
 /* ----- About-Styling ----- */
