@@ -1,7 +1,7 @@
 // Activates slider
 var mySwiper = new Swiper ('.swiper-container', {
     direction: 'vertical',
-    slidesPerView: 1.4,
+    slidesPerView: 2,
     spaceBetween: 30,
     freeMode: true,
     slidesOffsetBefore: 500,
@@ -13,10 +13,12 @@ var mySwiper = new Swiper ('.swiper-container', {
     breakpoints: {
         // when window width is >= 959px
         768: {
+            slidesPerView: 1,
             direction: 'horizontal',
         },
         959: {
             slidesOffsetBefore: 700,
+            slidesPerView: 1.4,
             direction: 'horizontal',
         },
     }
