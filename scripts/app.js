@@ -1,7 +1,7 @@
 // Activates slider
 var mySwiper = new Swiper ('.swiper-container', {
     direction: 'vertical',
-    slidesPerView: 2.5,
+    slidesPerView: 3,
     spaceBetween: 30,
     freeMode: true,
     slidesOffsetBefore: 500,
